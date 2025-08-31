@@ -1,0 +1,71 @@
+/* ==== WRAPPER ==== */
+.collection_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* căn giữa ngang */
+  text-align: center;  /* căn chữ giữa */
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.collection_title h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--icons-color);
+}
+
+/* ==== TAB BUTTON WRAPPER ==== */
+.collection_collections_btn {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  background-color: var(--icons-bg-color);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  flex-wrap: wrap; /* tránh tràn trên màn nhỏ */
+}
+
+/* ==== TAB BUTTON ITEM ==== */
+.collection_collections_btn button {
+  flex: 1; /* tự giãn đều */
+  min-width: 120px;
+  max-width: 200px;
+  text-align: center;
+
+  background: transparent;
+  border: 1px solid var(--icons-color);
+  color: var(--icons-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.collection_collections_btn button:hover {
+  background: var(--icons-color);
+  color: #fff;
+}
+
+/* ==== ACTIVE TAB ==== */
+.active {
+  background: var(--icons-color);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 480px) {
+  .collection_collections_btn {
+    gap: 0.5rem;
+  }
+
+  .collection_collections_btn button {
+    min-width: 100px; /* thu nhỏ nút */
+    font-size: 0.9rem;
+  }
+}

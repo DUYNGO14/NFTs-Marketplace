@@ -1,0 +1,305 @@
+.audioCardSmall {
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem 0;
+}
+
+.audioCardSmall_box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.audioCardSmall_box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.08) 0%, 
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 255, 255, 0.01) 100%);
+  border-radius: 1.5rem;
+  pointer-events: none;
+}
+
+.audioCardSmall_box:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Image Section */
+.audioCardSmall_box_img {
+  width: 80px;
+  height: 80px;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.audioCardSmall_box:hover .audioCardSmall_box_img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Info Section */
+.audioCardSmall_box_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.audioCardSmall_box_info h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  line-height: 1.3;
+}
+
+.audioCardSmall_box_info_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.audioCardSmall_box_info_box_price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.audioCardSmall_box_info_box_price small {
+  color: #ffffff;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.6rem;
+  width: fit-content;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.audioCardSmall_box_info_box_price p {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Play Button */
+.audioCardSmall_box_playBtn {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.audioCardSmall_box_playBtn:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.audioCardSmall_box_playBtn:active {
+  transform: scale(0.95);
+}
+
+.audioCardSmall_box_playBtn_icon {
+  font-size: 1.2rem;
+  color: #ffffff;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+  margin-left: 1px; /* Slight adjustment for play icon centering */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .audioCardSmall {
+    max-width: 100%;
+  }
+  
+  .audioCardSmall_box {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+  
+  .audioCardSmall_box_img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .audioCardSmall_box_info h4 {
+    font-size: 0.9rem;
+  }
+  
+  .audioCardSmall_box_info_box_price p {
+    font-size: 0.85rem;
+  }
+  
+  .audioCardSmall_box_playBtn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .audioCardSmall_box_playBtn_icon {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .audioCardSmall_box {
+    padding: 0.7rem;
+    gap: 0.7rem;
+    border-radius: 1.2rem;
+  }
+  
+  .audioCardSmall_box_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 0.8rem;
+  }
+  
+  .audioCardSmall_box_info h4 {
+    font-size: 0.85rem;
+  }
+  
+  .audioCardSmall_box_info_box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .audioCardSmall_box_info_box_price small {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .audioCardSmall_box_info_box_price p {
+    font-size: 0.8rem;
+  }
+  
+  .audioCardSmall_box_playBtn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .audioCardSmall_box_playBtn_icon {
+    font-size: 1rem;
+  }
+}
+
+/* Hover animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.audioCardSmall_box_playBtn_icon {
+  transition: all 0.3s ease;
+}
+
+.audioCardSmall_box_playBtn:hover .audioCardSmall_box_playBtn_icon {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Loading shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.audioCardSmall_box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  background-size: 200px 100%;
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 1.5rem;
+}
+
+.audioCardSmall_box:hover::after {
+  opacity: 1;
+}
+
+/* Focus states for accessibility */
+.audioCardSmall_box_playBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Active play state styling */
+.audioCardSmall_box_playBtn[data-playing="true"] {
+  background: rgba(255, 71, 87, 0.2);
+  border: 2px solid rgba(255, 71, 87, 0.4);
+}
+
+.audioCardSmall_box_playBtn[data-playing="true"]:hover {
+  background: rgba(255, 71, 87, 0.3);
+  border: 2px solid rgba(255, 71, 87, 0.5);
+}
+
+.audioCardSmall_box_playBtn[data-playing="true"] .audioCardSmall_box_playBtn_icon {
+  color: #ff4757;
+  filter: drop-shadow(0 2px 8px rgba(255, 71, 87, 0.4));
+}

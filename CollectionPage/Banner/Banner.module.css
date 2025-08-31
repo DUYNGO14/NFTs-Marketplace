@@ -1,0 +1,37 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+/* Desktop banner */
+.banner_img {
+  display: block;
+}
+
+.banner_img_img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Mobile banner (ẩn mặc định, chỉ hiện khi màn hình nhỏ) */
+.banner_img_mobile {
+  display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .banner_img {
+    display: none; /* Ẩn desktop banner khi ở mobile */
+  }
+
+  .banner_img_mobile {
+    display: block;
+  }
+
+  .banner_img_img {
+    border-radius: 0.5rem;
+  }
+}

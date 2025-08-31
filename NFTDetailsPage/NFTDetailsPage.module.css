@@ -1,0 +1,30 @@
+.NFTDetailsPage{
+    width: 100%;
+    margin-block: 0 auto;
+
+}
+
+.NFTDetailsPage_box{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .NFTDetailsPage{
+        margin-block: 2rem auto;
+    }
+    .NFTDetailsPage_box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .NFTDetailsPage{
+        margin-block: 2rem auto;
+    }
+    .NFTDetailsPage_box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,131 @@
+.filter {
+  width: 100%;
+}
+
+.filter_box {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  flex-wrap: wrap; /* Giúp co lại khi màn hình nhỏ */
+}
+
+.filter_box_left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.activeBtn {
+  border: 1px solid var(--icons-color);
+  color: var(--icons-color);
+  box-shadow: var(--box-shadow);
+  font-weight: bold;
+}
+
+.filter_box_left button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter_box_left button:hover {
+  border: 1px solid var(--icons-color);
+  color: var(--icons-color);
+  box-shadow: var(--box-shadow);
+}
+
+.filter_box_right_box {
+  border: 1px solid var(--icons-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  color: var(--icons-color);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter_box_item {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Tự động xuống hàng */
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--icons-color);
+}
+
+.filter_box_item_box {
+  flex: 1 1 150px; /* Mỗi box chiếm min 150px */
+}
+
+.filter_box_item_box_item {
+  background: var(--icons-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: var(--main-bg-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.filter_box_item_box_item_trans {
+  border: 1px solid var(--icons-color);
+  color: var(--icons-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+/* -------- Responsive -------- */
+@media screen and (max-width: 768px) {
+  .filter_box {
+    width: 90%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .filter_box_left {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .filter_box_item {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filter_box_left {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .filter_box_item {
+    grid-template-columns: 1fr;
+  }
+
+  .filter_box_right_box {
+    justify-content: center;
+    width: 100%;
+  }
+}

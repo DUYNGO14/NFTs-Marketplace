@@ -1,0 +1,128 @@
+.followerCard {
+  width: 100%;
+  max-width: 320px;
+  background: var(--shadow-light-color, #1c1c24);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.followerCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Rank */
+.followerCard_rank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #14141f;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Box wrapper */
+.followerCard_box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Background */
+.followerCard_box_img {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.followerCard_box_img_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Avatar */
+.followerCard_box_profile {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.followerCard_box_profile_img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  background: #000;
+}
+
+/* Info */
+.followerCard_box_info {
+    display: flex;
+  align-items: center;   /* căn giữa dọc */
+  justify-content: space-between; /* đẩy info trái, nút follow phải */
+  gap: 1rem;             /* khoảng cách giữa các phần */
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.followerCard_box_info_name h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--icons-color);
+}
+
+.nameWithIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.verifiedIcon {
+  color: #3b82f6; /* xanh dương */
+  font-size: 1.1rem;
+}
+
+.followerCard_box_info_name p {
+  font-size: 0.9rem;
+  color:  var(--icons-color);
+}
+
+/* Follow button */
+.followerCard_box_info_follow {
+  margin-top: 0.8rem;
+}
+
+.followerCard_box_info_follow_btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  display: inline-flex;   /* ✅ ép chữ và icon nằm ngang */
+  align-items: center;    /* ✅ căn giữa theo chiều dọc */
+  justify-content: center;
+  gap: 6px;               
+}
+
+.followerCard_box_info_follow_btn:hover {
+  background: #1d4ed8;
+}
+

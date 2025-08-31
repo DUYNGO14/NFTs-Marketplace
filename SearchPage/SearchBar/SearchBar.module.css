@@ -1,0 +1,84 @@
+.searchBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  background: var(--main-bg-color);
+}
+
+.searchBar_box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 40%; /* mặc định trên desktop */
+  max-width: 600px;
+  background: var(--main-bg-color);
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.searchBar_box:focus-within {
+  box-shadow: var(--box-shadow-2);
+}
+
+.searchBar_box_icon {
+  font-size: 1.2rem;
+  color: var(--icons-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.searchBar_box_icon:hover {
+  color: #111;
+}
+
+.searchBar_box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--icons-color);
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .searchBar_box {
+    width: 60%; /* Tablet */
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBar_box {
+    width: 80%; /* Mobile lớn */
+    gap: 0.6rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .searchBar_box input {
+    font-size: 0.95rem;
+  }
+
+  .searchBar_box_icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchBar_box {
+    width: 95%; /* Mobile nhỏ */
+    padding: 0.6rem 0.8rem;
+    gap: 0.5rem;
+  }
+
+  .searchBar_box input {
+    font-size: 0.9rem;
+  }
+
+  .searchBar_box_icon {
+    font-size: 0.9rem;
+  }
+}

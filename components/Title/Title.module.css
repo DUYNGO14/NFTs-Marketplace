@@ -1,0 +1,33 @@
+.title{
+    width: 100%;
+}
+
+.title_box{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title_box h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.title_box p{
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+@media  screen and (min-device-width: 320px) and (max-device-width: 425px) {
+    .title_box {
+        width: 90%;
+    }
+    .title_box h2{
+        font-size: 1.8rem;
+        line-height: 0;
+    }
+    
+}

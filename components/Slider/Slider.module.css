@@ -1,0 +1,93 @@
+/* Slider tổng */
+.slider {
+    width: 100%;
+    padding: 2rem 0;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+}
+
+.slider_box {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.slider_box h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--main-text-color);
+}
+
+/* Header button info */
+.slider_box_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.slider_box_button p {
+    font-size: 0.95rem;
+    color: var(--icons-color);
+    margin: 0;
+}
+
+.slider_box_button_btn {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.slider_box_button_btn_icon {
+    background-color: var(--secondary-bg-color);
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.slider_box_button_btn_icon:hover {
+    transform: scale(1.1);
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* Slider container */
+.slider_box_items {
+    overflow: hidden;
+    cursor: grab;
+}
+
+.slider_box_item {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .slider_box_button {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .slider_box h2 {
+        font-size: 1.5rem;
+    }
+    .slider_box_item {
+        gap: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .slider_box h2 {
+        font-size: 1.2rem;
+    }
+    .slider_box_button p {
+        font-size: 0.85rem;
+    }
+}

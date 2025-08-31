@@ -1,0 +1,128 @@
+/* ---------------- SliderCard ---------------- */
+.SliderCard {
+    padding: 1rem;
+}
+
+/* Box chính */
+.SliderCard_box {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.SliderCard_box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Ảnh */
+.SliderCard_box_img {
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+.SliderCard_box_img_img {
+    border-radius: 1.5rem 1.5rem 0 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Title + Like */
+.SliderCard_box_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.SliderCard_box_title p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--main-text-color);
+}
+
+.SliderCard_box_title_like {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.SliderCard_box_title_like small {
+    font-size: 0.85rem;
+    color: var(--icons-color);
+}
+
+/* Price + Remaining Time */
+.SliderCard_box_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* đồng đều chiều cao */
+    padding: 0 1.5rem 1rem;
+    gap: 1rem;
+}
+
+/* Box giá */
+.SliderCard_box_price_box,
+.SliderCard_box_price_time {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* text trên & dưới đều nhau */
+    background-color: var(--secondary-bg-color);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    min-width: 120px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.SliderCard_box_price_box:hover,
+.SliderCard_box_price_time:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.SliderCard_box_price_box small,
+.SliderCard_box_price_time small {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--icons-color);
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.SliderCard_box_price_box p,
+.SliderCard_box_price_time p {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--main-text-color);
+}
+
+/* ---------------- Responsive ---------------- */
+@media screen and (max-width: 425px) {
+    .SliderCard {
+        padding: 0.5rem;
+    }
+    .SliderCard_box_img {
+        height: 180px;
+    }
+    .SliderCard_box_title p {
+        font-size: 1rem;
+    }
+    .SliderCard_box_price_box p,
+    .SliderCard_box_price_time p {
+        font-size: 1rem;
+    }
+    .SliderCard_box_price {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .SliderCard_box_price_box,
+    .SliderCard_box_price_time {
+        width: 100%;
+    }
+}

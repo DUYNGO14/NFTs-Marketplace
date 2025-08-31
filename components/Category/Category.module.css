@@ -1,0 +1,90 @@
+.category {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  padding: 4rem 0rem;
+}
+
+.category_box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff; /* nền sáng */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.category_box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category_box_imgWrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.category_box_item_img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category_box:hover .category_box_item_img {
+  transform: scale(1.08);
+}
+
+.category_box_title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.85); /* đổi sang overlay sáng */
+  color: #111;
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+  backdrop-filter: blur(6px);
+}
+
+.category_box_title_info h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.category_box_title_info small {
+  font-size: 0.8rem;
+  color: #555;
+}
+/* 5 cột desktop */
+.category {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Tablet lớn: 3 cột */
+@media (max-width: 1200px) {
+  .category {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile: 2 cột */
+@media (max-width: 768px) {
+  .category {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile nhỏ: 1 cột */
+@media (max-width: 480px) {
+  .category {
+    grid-template-columns: 1fr;
+  }
+}

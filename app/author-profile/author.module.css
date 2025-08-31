@@ -1,0 +1,20 @@
+.author_popular_box{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .author_popular_box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .author_popular_box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

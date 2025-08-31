@@ -1,0 +1,278 @@
+.authorTaps {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.authorTaps_box {
+  width: 80%;
+  background-color: var(--main-bg-color);
+  border-radius: 1.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+.authorTaps_box:hover {
+  transform: translateY(-0.1rem);
+}
+
+/* Left Tabs Section */
+.authorTaps_box_left {
+  flex: 1;
+}
+
+.authorTaps_box_left_btn {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.authorTaps_box_left_btn button {
+  background-color: var(--main-bg-color);
+  border: none;
+  color: var(--icons-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.authorTaps_box_left_btn button:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0.3rem 0.3rem 0.8rem var(--shadow-dark-color),
+              -0.3rem -0.3rem 0.8rem var(--shadow-light-color);
+}
+
+.authorTaps_box_left_btn button:active {
+  transform: translateY(0.1rem);
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--shadow-dark-color),
+              inset -0.2rem -0.2rem 0.5rem var(--shadow-light-color);
+}
+
+.authorTaps_box_left_btn button.active {
+  background: linear-gradient(145deg, #1da1f2, #0d8bd9);
+  color: white;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2),
+              inset -0.2rem -0.2rem 0.5rem rgba(255, 255, 255, 0.1);
+  transform: translateY(0.1rem);
+}
+
+.authorTaps_box_left_btn button.active:hover {
+  background: linear-gradient(145deg, #0d8bd9, #1da1f2);
+  transform: translateY(0);
+}
+
+/* Right Dropdown Section */
+.authorTaps_box_right {
+  position: relative;
+  min-width: 12rem;
+}
+
+.authorTaps_box_right_para {
+  background-color: var(--main-bg-color);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow-2);
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.authorTaps_box_right_para:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0.3rem 0.3rem 0.8rem var(--shadow-dark-color),
+              -0.3rem -0.3rem 0.8rem var(--shadow-light-color);
+}
+
+.authorTaps_box_right_para:active {
+  transform: translateY(0.1rem);
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--shadow-dark-color),
+              inset -0.2rem -0.2rem 0.5rem var(--shadow-light-color);
+}
+
+.authorTaps_box_right_para p {
+  margin: 0;
+  color: var(--icons-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+.authorTaps_box_right_para svg {
+  color: var(--icons-color);
+  transition: all 0.3s ease;
+}
+
+/* Dropdown List */
+.authorTaps_box_right_list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--main-bg-color);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  z-index: 100;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.authorTaps_box_right_list_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 0.2rem;
+}
+
+.authorTaps_box_right_list_item:last-child {
+  margin-bottom: 0;
+}
+
+.authorTaps_box_right_list_item:hover {
+  background-color: var(--icons-bg-color);
+  transform: translateX(0.3rem);
+}
+
+.authorTaps_box_right_list_item p {
+  margin: 0;
+  color: var(--icons-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+.authorTaps_box_right_list_item span {
+  color: #1da1f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.authorTaps_box_right_list_item span svg {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .authorTaps_box {
+    width: 90%;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .authorTaps_box_left {
+    width: 100%;
+  }
+
+  .authorTaps_box_left_btn {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .authorTaps_box_left_btn button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    flex: 1;
+    min-width: fit-content;
+  }
+
+  .authorTaps_box_right {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .authorTaps_box_right_list {
+    left: 0;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .authorTaps_box {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .authorTaps_box_left_btn {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .authorTaps_box_left_btn button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .authorTaps_box_right_para {
+    padding: 1rem;
+  }
+
+  .authorTaps_box_right_para p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .authorTaps {
+    margin: 1rem 0;
+  }
+
+  .authorTaps_box {
+    width: 98%;
+    padding: 0.8rem;
+    border-radius: 1rem;
+  }
+
+  .authorTaps_box_left_btn button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .authorTaps_box_right_para {
+    padding: 0.8rem;
+  }
+
+  .authorTaps_box_right_list_item {
+    padding: 0.7rem;
+  }
+
+  .authorTaps_box_right_list_item p {
+    font-size: 0.85rem;
+  }
+}

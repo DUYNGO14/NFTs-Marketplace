@@ -1,0 +1,403 @@
+.uploadNFT {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.uploadNFT_box {
+  background-color: var(--main-bg-color);
+  border-radius: 1.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+.uploadNFT_box:hover {
+  transform: translateY(-0.1rem);
+}
+
+/* Form Input Styles */
+.form_box_input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form_box_input label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--icons-color);
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form_box_input label::before {
+  content: '';
+  width: 0.3rem;
+  height: 1.2rem;
+  background: linear-gradient(145deg, #1da1f2, #0d8bd9);
+  border-radius: 0.15rem;
+}
+
+.form_box_input input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background-color: var(--main-bg-color);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: inset 0.3rem 0.3rem 0.6rem var(--shadow-dark-color),
+              inset -0.3rem -0.3rem 0.6rem var(--shadow-light-color);
+  font-size: 1rem;
+  color: var(--icons-color);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form_box_input input:focus {
+  box-shadow: inset 0.4rem 0.4rem 0.8rem var(--shadow-dark-color),
+              inset -0.4rem -0.4rem 0.8rem var(--shadow-light-color),
+              0 0 0 0.2rem rgba(29, 161, 242, 0.2);
+}
+
+.form_box_input input::placeholder {
+  color: var(--icons-light-color);
+  font-style: italic;
+}
+
+.form_box_input textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background-color: var(--main-bg-color);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: inset 0.3rem 0.3rem 0.6rem var(--shadow-dark-color),
+              inset -0.3rem -0.3rem 0.6rem var(--shadow-light-color);
+  font-size: 1rem;
+  color: var(--icons-color);
+  resize: vertical;
+  min-height: 8rem;
+  transition: all 0.3s ease;
+  outline: none;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.form_box_input textarea:focus {
+  box-shadow: inset 0.4rem 0.4rem 0.8rem var(--shadow-dark-color),
+              inset -0.4rem -0.4rem 0.8rem var(--shadow-light-color),
+              0 0 0 0.2rem rgba(29, 161, 242, 0.2);
+}
+
+.form_box_input textarea::placeholder {
+  color: var(--icons-light-color);
+  font-style: italic;
+}
+
+/* Input with Icon */
+.form_box_input_box {
+  display: flex;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  border-radius: 1rem;
+  box-shadow: inset 0.3rem 0.3rem 0.6rem var(--shadow-dark-color),
+              inset -0.3rem -0.3rem 0.6rem var(--shadow-light-color);
+  padding: 1rem 1.2rem;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.form_box_input_box:focus-within {
+  box-shadow: inset 0.4rem 0.4rem 0.8rem var(--shadow-dark-color),
+              inset -0.4rem -0.4rem 0.8rem var(--shadow-light-color),
+              0 0 0 0.2rem rgba(29, 161, 242, 0.2);
+}
+
+.form_box_input_box svg {
+  color: var(--icons-color);
+  font-size: 1.3rem;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.form_box_input_box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  font-size: 1rem;
+  color: var(--icons-color);
+}
+
+.form_box_input_box input:focus {
+  box-shadow: none;
+}
+
+/* Collection Slider */
+.uploadNFT_box_slider_box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.uploadNFT_box_slider_box_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--main-bg-color);
+  border-radius: 1.2rem;
+  box-shadow: var(--box-shadow-2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.uploadNFT_box_slider_box_item:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0.5rem 0.5rem 1.5rem var(--shadow-dark-color),
+              -0.5rem -0.5rem 1.5rem var(--shadow-light-color);
+}
+
+.uploadNFT_box_slider_box_item.active {
+  background: linear-gradient(145deg, #1da1f2, #0d8bd9);
+  color: white;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2),
+              0.5rem 0.5rem 1.5rem var(--shadow-dark-color);
+}
+
+.uploadNFT_box_slider_box_item.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+}
+
+.uploadNFT_box_slider_box_item_img {
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-2);
+}
+
+.uploadNFT_box_slider_box_item_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.uploadNFT_box_slider_box_item:hover .uploadNFT_box_slider_box_item_img img {
+  transform: scale(1.1);
+}
+
+.uploadNFT_box_slider_box_item_icon {
+  position: absolute;
+  top: -0.3rem;
+  right: -0.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(145deg, #1da1f2, #0d8bd9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.uploadNFT_box_slider_box_item.active .uploadNFT_box_slider_box_item_icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.uploadNFT_box_slider_box_item p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--icons-color);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.uploadNFT_box_slider_box_item.active p {
+  color: white;
+  font-weight: 600;
+}
+
+/* Social Input Row */
+.form_box_input_social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1.5rem;
+}
+
+/* Upload Button */
+.uploadNFT_box_button {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .uploadNFT_box_slider_box {
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    gap: 1.2rem;
+  }
+
+  .form_box_input_social {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .uploadNFT_box {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .uploadNFT_box_slider_box {
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    gap: 1rem;
+  }
+
+  .uploadNFT_box_slider_box_item {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .uploadNFT_box_slider_box_item_img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .form_box_input_social {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .form_box_input input,
+  .form_box_input textarea,
+  .form_box_input_box {
+    padding: 0.9rem 1rem;
+  }
+
+  .form_box_input label {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .uploadNFT_box {
+    padding: 1.5rem;
+  }
+
+  .uploadNFT_box_slider_box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .uploadNFT_box_slider_box_item {
+    padding: 1rem 0.5rem;
+  }
+
+  .uploadNFT_box_slider_box_item_img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .uploadNFT_box_slider_box_item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .uploadNFT {
+    gap: 1.5rem;
+  }
+
+  .uploadNFT_box {
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+  }
+
+  .form_box_input {
+    gap: 0.6rem;
+  }
+
+  .form_box_input input,
+  .form_box_input textarea,
+  .form_box_input_box {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .form_box_input textarea {
+    min-height: 6rem;
+  }
+
+  .uploadNFT_box_slider_box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .uploadNFT_box_slider_box_item {
+    padding: 0.8rem 0.4rem;
+  }
+
+  .uploadNFT_box_slider_box_item_img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .uploadNFT_box_slider_box_item p {
+    font-size: 0.75rem;
+  }
+
+  .uploadNFT_box_slider_box_item_icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* Animation for form elements */
+.form_box_input {
+  animation: slideInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.form_box_input:nth-child(1) { animation-delay: 0.1s; }
+.form_box_input:nth-child(2) { animation-delay: 0.2s; }
+.form_box_input:nth-child(3) { animation-delay: 0.3s; }
+.form_box_input:nth-child(4) { animation-delay: 0.4s; }
+.form_box_input_social { animation-delay: 0.5s; }
+.uploadNFT_box_button { animation-delay: 0.6s; }
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

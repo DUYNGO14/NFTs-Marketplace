@@ -1,0 +1,131 @@
+.daysComponents {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.daysComponents_box {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+  background: var(--shadow-light-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.daysComponents_box:hover {
+  transform: translateY(-5px);
+}
+
+/* Ảnh chính */
+.mainImage {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.mainImage_img {
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+  transition: transform 0.4s ease;
+}
+
+.mainImage_img:hover {
+  transform: scale(1.05);
+}
+
+/* Ảnh phụ */
+.subImages {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0.5rem 1rem;
+}
+
+.subImg {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subImg:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Info */
+.infoBox {
+  padding: 1rem;
+  text-align: center;
+}
+
+.infoBox h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.creator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.creator_box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.creator_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* text của Creator */
+.creator_text {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+}
+
+.creator_label {
+  color: #777;
+  font-weight: 500;
+}
+
+.creator_name {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.creator_name small {
+  color: #1da1f2; /* xanh kiểu verified */
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.price {
+    
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c5ce7;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--icons-light-color);
+}

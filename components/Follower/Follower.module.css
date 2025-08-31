@@ -1,0 +1,35 @@
+/* ==== WRAPPER ==== */
+.follower {
+  width: 100%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ==== NFT CARD GRID ==== */
+.follower_box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .follower {
+    padding: 0 1.2rem;
+  }
+
+  .follower_box {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .follower {
+    padding: 0 0.8rem;
+  }
+
+  .follower_box {
+    grid-template-columns: 1fr;
+  }
+}

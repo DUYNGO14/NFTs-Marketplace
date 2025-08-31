@@ -1,0 +1,115 @@
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin: 5rem auto;
+  padding: 2.5rem;
+  background: var(--main-bg-color);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--icons-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+  background: var(--main-bg-color);
+  box-shadow: inset 0.3rem 0.3rem 0.6rem var(--shadow-dark-color),
+              inset -0.3rem -0.3rem 0.6rem var(--shadow-light-color);
+  font-size: 1rem;
+  color: var(--icons-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.input:focus {
+  box-shadow: inset 0.2rem 0.2rem 0.5rem var(--shadow-dark-color),
+              inset -0.2rem -0.2rem 0.5rem var(--shadow-light-color),
+              0 0 0 3px var(--icons-light-color);
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: var(--main-bg-color);
+  box-shadow: var(--box-shadow);
+  color: var(--icons-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: var(--box-shadow-2);
+  transform: translateY(-2px);
+}
+
+.link {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--icons-color);
+}
+
+.link a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0077ff;
+  transition: color 0.2s ease;
+}
+.divider {
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  position: relative;
+}
+
+.fbButton {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #1877f2;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.fbButton:hover {
+  opacity: 0.9;
+}
+
+.fbIcon {
+  font-size: 1.2rem;
+}
+.link a:hover {
+  color: #0056cc;
+}
